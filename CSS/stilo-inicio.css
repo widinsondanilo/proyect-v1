@@ -1,0 +1,74 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap');
+
+:root {
+    --clr-main: #4b33a8;
+    --clr-main-light: #785ce9;
+    --clr-white: #ececec;
+    --clr-gray: #e2e2e2;
+    --clr-red: #961818;
+}
+        #family-section {
+            margin-top: 20px;
+            padding: 20px;
+            border: 1px solid #000;
+            border-radius: 10px;
+            width: 50%;
+            margin: 0 auto;
+        }
+
+        #family-section h2 {
+            text-align: center;
+        }
+
+        #family-section label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        #family-section input {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 10px;
+        }
+
+        #family-section button {
+            padding: 20px;
+            width: 100%;
+            background-color:var(--clr-main);
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #family-section button:hover {
+            background-color:var(--clr-main);
+        }
+
+        #family-section a {
+            padding: 20px;
+            width: 100%;
+            background-color:var(--clr-main);
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            color:#141414;
+        }
+        header.baner a p{
+            background-color:var(--clr-main);
+            padding: 10px;
+            text-align: center;
+            color: #f1ecec;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            z-index: 1;
+        }
+    

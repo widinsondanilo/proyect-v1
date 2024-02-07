@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema</title>
+    <link rel="stylesheet" href="CSS/stilo-sistema.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body onload="cargarApp()">
+    <div class="menu-lateral">
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a  href="reporte.html">Generar Reporte</a>
+            <a href="Contactos.html">Contactos</a>   
+            
+            <br>
+            <br>
+            <br>
+                <p>
+                Todos los derechos reservados &copy; 2024
+                </p>
+        
+        </nav>
+    </div>
+    <div class="caja">
+    <div class="ingresar">
+        <form id="forma" onsubmit="return false;">
+            <div class="agregar">
+                <div class="agregar_contenedor">
+                    <select class="agregar_tipo" id="tipo">
+                        <option value="ingreso" selected>Ingresos</option>
+                        <option value="egreso">Egresos</option>
+                    </select>
+                    <label for="nombre">Nombre: Quien realiza Egreso/Ingreso</label>
+                    <input type="text" class="agregar_nombre" id="nombre"/>
+                    <label for="descripcion">Descripción:</label>
+                    <input type="text" class="agregar_descripcion" id="descripcion"/>
+                    <label for="valor">Valor:</label>
+                    <input type="number" class="agregar_valor" id="valor" step="any" placeholder="Egresos/ingresos en dólares" min="0" pattern="[0-9]+(\.[0-9]{1,2})?"/>
+                    <button class="agregar_btn" onclick="agregarDato()">
+                        <ion-icon name="checkmark-circle-outline"></ion-icon>
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <div class="contenedor limpiarEstilos">
+        <div class="ingreso">
+            <h2 class="ingreso_titulo">Ingresos</h2>
+            <div id="lista-ingresos"></div>
+        </div>
+        <div class="egreso">
+            <h2 class="egreso_titulo">Egresos</h2>
+            <div id="lista-egresos"></div>
+        </div>
+    </div>
+    <div class="grafico-container">
+        <canvas id="graficoIngresosEgresos" width="400" height="200"></canvas>
+    </div> 
+    <div class="cabecero">
+        <div class="presupuesto">
+            <div class="presupuesto_titulo">Presupuesto Disponible</div>
+            <div class="presupuesto_valor" id="presupuesto">+ 2,000.00</div>
+            <div class="presupuesto_ingreso limpiarEstilos">
+                <div class="presupuesto_ingreso--texto">Ingresos</div>
+                <div class="derecha">
+                    <div class="presupues_ingreso--valor" id="ingresos">+ 4,000.00</div>
+                    <div class="presupuesto_ingreso--porcentaje">&nbsp;</div>
+                </div>
+            </div>
+            <div class="presupuesto_egreso limpiarEstilos">
+                <div class="presupuesto_egreso--texto">Egresos</div>
+                <div class="derecha limpiarEstilos">
+                    <div class="presupuesto_egreso--valor" id="egresos">- 1000.00</div>
+                    <div class="presupuesto_egreso--porcentaje" id="porcentaje">45%</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+        
+       
+   </div>       
+   
+
+   
+    <script src="JS/Dato.js"></script>
+    <script src="JS/Ingreso.js"></script>
+    <script src="JS/Egreso.js"></script>
+    <script src="JS/app.js"></script>
+    <script src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

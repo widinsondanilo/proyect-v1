@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <link rel="stylesheet" href="./CSS/stilo-inicio.css">
+</head>
+<body>
+    <header class="baner">
+        <nav>
+            <a  href="index.html">Inicio</a>
+        </nav>
+    </header>
+    <br>
+    <div>
+        <main>
+            <div id="family-section">
+                <h2>Datos de la Familia/Crear Cuenta</h2>
+                <form>
+                    <label for="family-name">Nombre de la Familia:</label>
+                    <input type="text" id="family-name" required autofocus placeholder="Ingrese el nombre de la familia">
+
+                    <label for="family-members">Número de Miembros:</label>
+                    <input type="number" id="family-members" required autofocus placeholder="Ingrese el número de miembros">
+
+                    <label for="email">Correo electrónico:</label>
+                    <input type="email" id="email" required autofocus pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="@gmail.com">
+
+                    <label for="Usuario">Cree su usuario:</label>
+                    <input type="text" id="Usuario" required autofocus pattern="[a-zA-Z0-9]+" placeholder="Ingrese su usuario">
+
+                    <label for="Contraseña">Cree su contraseña:</label>
+                    <input type="password" id="Contraseña" required autofocus pattern=".{8,}" placeholder="Ingrese su contraseña">
+
+                    <button onclick="createFamily()">Crear Familia</button>
+                </form>
+                <div>
+                    <button>
+                        <a href="index.html">Iniciar Sesión</a>
+                    </button>
+                </div>
+            </div>
+        </main>
+    </div>
+    <footer>
+        <br>
+        Todos los derechos reservados &copy; 2024
+        <br>
+        <br>
+    </footer>
+    <script src="./JS/Dato.js"></script>
+</body>
+</html>
